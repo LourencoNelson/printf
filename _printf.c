@@ -9,6 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int i, j, s;
+	char *str;
 	va_list ap;
 
 	s = 0;
@@ -32,7 +33,7 @@ int _printf(const char *format, ...)
 					_putchar(va_arg(ap, int));
 					break;
 				case 's':
-					char *str = va_arg(ap, char*);
+					str = va_arg(ap, char*);
 
 					for (j = 0; str[j] != '\0'; j++)
 					{
