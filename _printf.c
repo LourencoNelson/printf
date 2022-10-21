@@ -8,8 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, s;
-	char *str;
+	int i, s;
 	va_list ap;
 
 	s = 0;
@@ -29,18 +28,17 @@ int _printf(const char *format, ...)
 			switch (format[i + 1])
 			{
 				case 'c':
-					s++;
-					_putchar(va_arg(ap, int));
+					s += print_char(va_arg(ap, int));
 					break;
 				case 's':
-					str = va_arg(ap, char*);
-
-					for (j = 0; str[j] != '\0'; j++)
-					{
-						s++;
-						_putchar(str[j]);
-						break;
-					}
+					s += print_string(va_arg(ap, char*));
+					break;
+				case 'd':
+					s += print_num(va_arg(ap, int));
+					break;
+				case 'i':
+					s += print_num(va_arg(ap, int));
+					break;
 			}
 			i++;
 		}
