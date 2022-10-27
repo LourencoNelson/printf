@@ -13,7 +13,7 @@ int print_number(va_list ap)
 	int len;
 	unsigned int num;
 
-	n  = va_arg(args, int);
+	n  = va_arg(ap, int);
 	div = 1;
 	len = 0;
 

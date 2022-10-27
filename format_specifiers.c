@@ -70,9 +70,9 @@ int unsigned_integer(va_list ap)
 	num = va_arg(ap, unsigned int);
 
 	if (num == 0)
-		return (print_unsgined_number(num));
+		return (print_unsigned_number(num));
 	if (num < 1)
 		return (-1);
-	return (print_unsgined_number(num));
+	return (print_unsigned_number(num));
 }
 

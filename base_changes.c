@@ -17,7 +17,7 @@ int print_binary(va_list ap)
 	char *rev_str;
 
 	num = va_arg(ap, unsigned int);
-	int (num == 0)
+	if (num == 0)
 		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
@@ -60,7 +60,7 @@ int print_octal(va_list ap)
 	num = va_arg(ap, unsigned int);
 
 	if (num == 0)
-		return (_putcchar('0'));
+		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
 	len = base_len(num, 8);

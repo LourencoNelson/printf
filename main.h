@@ -34,14 +34,14 @@ int print_reversed(va_list ap);
 int rot13(va_list ap);
 int rot13(va_list ap);
 int unsigned_integer(va_list ap);
-int print_octal(va_list list ap);
-int print_hex(va_list list ap);
-int print_heX(va_list list ap);
+int print_octal(va_list ap);
+int print_hex(va_list ap);
+int print_heX(va_list ap);
 
 unsigned int base_len(unsigned int num, int base);
 char *rev_string(char *s);
 void write_base(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
-int print_unsgined_number(unsigned int n);
+int print_unsigned_number(unsigned int n);
 
 #endif
